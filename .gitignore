@@ -1,0 +1,8 @@
+*~
+*.swp
+*.log
+*.zip
+*.tar.gz
+*.o
+*.out
+.monitor
