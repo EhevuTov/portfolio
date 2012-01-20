@@ -23,20 +23,16 @@ int main( int argc, char* argv[] ) {
   memcpy ( buff + sizeof( unsigned short ), &f, sizeof( float ) );
   memcpy ( buff + sizeof( unsigned short ) + sizeof( float ), s, strlen( s ) );
 
-//  for (int i = 0; buff[i] != EOF; i++) {
   for (int i = 0; i < 30; i++) {
     printf ( "%02X\n", buff[i] );
   };
 
   struct packet output;
-//  output->i = *(int*)(buff[0]);
   output.i  = (unsigned short) (buff[0]);
   output.f  = (float) (buff[0 + sizeof(unsigned short)]);
-//  &output.s = (&buff[0 + sizeof(unsigned short) + strlen( s ) ] );
 
   printf ( "packet short: %u\n", output.i );
   printf ( "packet float: %f\n", output.f );
-//  printf ( "packet   str: %s\n", output.s );
 
   return 1;
 }
