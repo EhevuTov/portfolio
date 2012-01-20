@@ -9,7 +9,7 @@ request.on( 'message', function (data) {
 })
 
 // synchronous
-request.connect( "tcp://192.168.1.174:3000" )
+request.connect( "tcp://localhost:3000" )
 request.send( 'Oh, Hallo Thar' )
 
 // gracefully exit program
